@@ -1,5 +1,4 @@
 #include "matriks.h"
-#include "unit.h"
 #include "pcolor.h"
 
 #ifndef MAP_H
@@ -11,7 +10,7 @@ void CreateMap(int m, int n, MATRIKS* M);
 void PrintMap(int m, int n, MATRIKS M);
 /* Untuk Mencetak Map */
 
-void convertIndex (int m, int n);
+void convertIndex (int *m, int *n);
 /* Untuk mengkonvert indeks */
 
 #endif
