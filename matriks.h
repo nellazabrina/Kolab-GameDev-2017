@@ -64,4 +64,14 @@ void TulisMATRIKS (MATRIKS M);
 4 5 6
 8 9 10 */
 
+/* *** Selektor: Untuk sebuah matriks M yang terdefinisi: *** */
+indeks GetFirstIdxBrs (MATRIKS M);
+/* Mengirimkan indeks baris terkecil M */
+indeks GetFirstIdxKol (MATRIKS M);
+/* Mengirimkan indeks kolom terkecil M */
+indeks GetLastIdxBrs (MATRIKS M);
+/* Mengirimkan indeks baris terbesar M */
+indeks GetLastIdxKol (MATRIKS M);
+/* Mengirimkan indeks kolom terbesar M */
+
 #endif
