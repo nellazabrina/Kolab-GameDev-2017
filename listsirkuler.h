@@ -122,4 +122,6 @@ void DelP (List *L, Unit X);
 // /* Jika list kosong : menulis [] */
 // /* Tidak ada tambahan karakter apa pun di awal, akhir, atau di tengah */
 
+void bacaunit(LIST *stdunit);
+
 #endif
