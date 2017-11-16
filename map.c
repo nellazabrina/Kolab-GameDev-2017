@@ -98,3 +98,15 @@ void convertIndex (int *m, int *n) {
     *m = ((*m)*4)+1;
     *n = ((*n)*4)+1;
 }
+
+void IndexUnit (int *m, int *n) {
+  convertIndex(m, n);
+  *m += 2;
+  *n += 2;
+}
+
+void IndexBuilding (int *m, int *n) {
+  convertIndex(m, n);
+  *m += 2;
+  *n += 1;
+}
