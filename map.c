@@ -2,27 +2,52 @@
 #include <stdio.h>
 
 void CreateMap(int m, int n, MATRIKS* M) {
-  convertIndex (m, n);
-  MakeMATRIKS(n,m,M);
+  NBrsEff(*M) = m;
+  NKolEff(*M) = n;
   for (int i=0; i<m; i++) {
     for (int j=0; j<n; j++) {
       if (i%4==0) {
           Elmt(*M,i,j).CC='*';
-	  Elmt(*M,i,j).kepemilikan=3;
+      Elmt(*M,i,j).kepemilikan=3;
       }
       else {
         if (j%4==0) {
           Elmt(*M,i,j).CC='*';
-	  Elmt(*M,i,j).kepemilikan=3;
+      Elmt(*M,i,j).kepemilikan=3;
         }
         else {
           Elmt(*M,i,j).CC=' ';
-	  Elmt(*M,i,j).kepemilikan=3;
+      Elmt(*M,i,j).kepemilikan=3;
         }
       }
     }
   }
-  PrintMap(m, n, *M);
+
+  Elmt(*M, m-4, 6).CC = 'C';
+  Elmt(*M, m-4, 6).kepemilikan = 1;
+  Elmt(*M, m-8, 6).CC = 'T';
+  Elmt(*M, m-8, 6).kepemilikan = 1;
+  Elmt(*M, m-7, 6).CC = 'K';
+  Elmt(*M, m-7, 6).kepemilikan = 1;
+  Elmt(*M, m-12, 6).CC = 'C';
+  Elmt(*M, m-12, 6).kepemilikan = 1;
+  Elmt(*M, m-8, 2).CC = 'C';
+  Elmt(*M, m-8, 2).kepemilikan = 1;
+  Elmt(*M, m-8, 10).CC = 'C';
+  Elmt(*M, m-8, 10).kepemilikan = 1;
+
+  Elmt(*M, 1, n-7).CC = 'C';
+  Elmt(*M, 1, n-7).kepemilikan = 2;
+  Elmt(*M, 5, n-7).CC = 'T';
+  Elmt(*M, 5, n-7).kepemilikan = 2;
+  Elmt(*M, 6, n-7).CC = 'K';
+  Elmt(*M, 6, n-7).kepemilikan = 2;
+  Elmt(*M, 5, n-3).CC = 'C';
+  Elmt(*M, 5, n-3).kepemilikan = 2;
+  Elmt(*M, 5, n-11).CC = 'C';
+  Elmt(*M, 5, n-11).kepemilikan = 2;
+  Elmt(*M, 9, n-7).CC = 'C';
+  Elmt(*M, 9, n-7).kepemilikan = 2;
 }
 
 void PrintMap(int m, int n, MATRIKS M) {
@@ -69,7 +94,7 @@ void PrintMap(int m, int n, MATRIKS M) {
   }
 }
 
-void convertIndex (int m, int n) {
-    m = (m*4)+1;
-    n = (n*4)+1;
+void convertIndex (int *m, int *n) {
+    *m = ((*m)*4)+1;
+    *n = ((*n)*4)+1;
 }
