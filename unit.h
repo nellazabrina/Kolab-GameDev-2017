@@ -5,10 +5,6 @@
 #include "mesinkata.h"
 #include "listsirkuler.h"
 
-const Kata range("Range", 5);
-const Kata melle("Melle", 5);
-const Kata endunit("End", 3);
-
 typedef struct{
 	Kata type;
 	Kata atktype;
