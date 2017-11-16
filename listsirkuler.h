@@ -7,6 +7,7 @@
 
 #include "boolean.h"
 #include "unit.h"
+#include "mesinkata.h"
 
 #define Nil NULL
 
