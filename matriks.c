@@ -106,17 +106,4 @@ void TulisMATRIKS (MATRIKS M)
 	}
 }
 
-/* ********** Operasi lain ********** */
-int NBElmt (MATRIKS M)
-/* Mengirimkan banyaknya elemen M */
-{
-    return(NBrsEff(M)*NKolEff(M));
-}
-
-/* ********** KELOMPOK TEST TERHADAP MATRIKS ********** */
-boolean IsBujurSangkar (MATRIKS M)
-/* Mengirimkan true jika M adalah matriks dg ukuran baris dan kolom sama */
-{
-    return(NBrsEff(M) == NKolEff(M));
-}
 
