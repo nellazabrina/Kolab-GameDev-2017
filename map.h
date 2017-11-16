@@ -1,5 +1,6 @@
 #include "matriks.h"
 #include "unit.h"
+#include "pcolor.h"
 
 #ifndef MAP_H
 #define MAP_H
