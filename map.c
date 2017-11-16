@@ -1,6 +1,7 @@
 #include "map.h"
 
 void CreateMap(int m, int n, MATRIKS* M) {
+  convertIndex (m, n);
   MakeMATRIKS(n,m,M);
   for (int i=0; i<m; i++) {
     for (int j=0; j<n; j++) {
@@ -65,4 +66,9 @@ void PrintMap(int m, int n, MATRIKS M) {
       }
     }
   }
+}
+
+void convertIndex (int m, int n) {
+    m = (m*4)+1;
+    n = (n*4)+1;
 }
