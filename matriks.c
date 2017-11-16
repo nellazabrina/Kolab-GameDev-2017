@@ -63,7 +63,7 @@ void BacaMATRIKS (MATRIKS * M, int NB, int NK)
 {
     int i,j;
 
-    MakeMATRIKS(NB,NK,&M);
+    MakeMATRIKS(NB,NK,M);
     NBrsEff(*M) = NB;
     NKolEff(*M) = NK;
 
@@ -106,4 +106,23 @@ void TulisMATRIKS (MATRIKS M)
 	}
 }
 
-
+indeks GetFirstIdxBrs (MATRIKS M)
+/* Mengirimkan indeks baris terkecil M */
+{
+    return(BrsMin);
+}
+indeks GetFirstIdxKol (MATRIKS M)
+/* Mengirimkan indeks kolom terkecil M */
+{
+    return(KolMin);
+}
+indeks GetLastIdxBrs (MATRIKS M)
+/* Mengirimkan indeks baris terbesar M */
+{
+    return(NBrsEff(M));
+}
+indeks GetLastIdxKol (MATRIKS M)
+/* Mengirimkan indeks kolom terbesar M */
+{
+    return(NKolEff(M));
+}
