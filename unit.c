@@ -59,3 +59,11 @@ void PrintUnit(Unit U){
 	TulisPOINT(U.pos);
 	printf(" | Health %d", U.currhealth);
 }
+
+boolean IsSama(Unit a, Unit b){
+	if(NEQ(position(a), position(b))
+	   return false;
+	if(!IsSama(a.type, b.type))
+	   	return false;
+	return true;
+}
