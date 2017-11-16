@@ -1,4 +1,5 @@
 #include "map.h"
+#include <stdio.h>
 
 void CreateMap(int m, int n, MATRIKS* M) {
   convertIndex (m, n);
